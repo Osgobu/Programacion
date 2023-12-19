@@ -38,21 +38,21 @@ while contador < alum:
     contador = contador + 1
 print("nota media")
 for almuno in lista:
-    print("\t""\n", nom)
-    print("\t""\n",cognom)
-    print("\t""\n", edat)
-    print("\t""\n", nota1)
-    print("\t""\n", nota2)
-    print("\t""\n", nota3)
+    print("\t", "Nom: ", nom)
+    print("\t","Cognom: ", cognom)
+    print("\t","Edat: ", edat)
+    print("\t","Nota 1: ", nota1)
+    print("\t","Nota 2: ", nota2)
+    print("\t","Nota 3: ", nota3)
 
-print("Tenen un 8")
+print("\n""Tenen un 8")
 for almuno in lista2:
-    print("\t""\n", nom)
-    print("\t""\n",cognom)
-    print("\t""\n", edat)
-    print("\t""\n", nota1)
-    print("\t""\n", nota2)
-    print("\t""\n", nota3)
+    print("\t", "Nom: ", nom)
+    print("\t","Cognom: ", cognom)
+    print("\t","Edat: ", edat)
+    print("\t","Nota 1: ", nota1)
+    print("\t","Nota 2: ", nota2)
+    print("\t","Nota 3: ", nota3)
 
 
 
