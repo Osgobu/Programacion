@@ -15,14 +15,11 @@ Pinta per pantalla les dues llistes de la següent forma: titol o nom representa
 
 #PRE: Queremos saber cuales la informacion de cada estudiante y que notas tiene
 
-a=int(input("Escibeme cuantos alumnos hay: "))
-alumn=int(input("Escribe las  tres notas que has sacado: "))
+alum= int(input('Pon el numero de alumnos que quieras hacer:'))
 contador=1
-almuno1=[]
-alumno2=[]
-alumno3=[]
 lista=[]
-while contador < alumn:
+lista2=[]
+while contador < alum:
     nom=input("Escriu el teu nom:")
     cognom=input("Escriu el teu cognom:")
     edat=int(input("Escriu la teva edad:"))
@@ -34,10 +31,29 @@ while contador < alumn:
 
     resultado_final= (nota1*0.30) + (nota2 * 0.40) + (nota3 * 0.30)
     if resultado_final <= 7:
-        lista.append(resultado_final)
+        lista.append(alumno)
         
-    if alumno1>=8 or alumno2>=8 or alumno3>=8:
-        lista.append(resultado_final)
+    if nota1>=8 or nota2>=8 or nota3>=8:
+        lista2.append(alumno)
+    contador = contador + 1
+print("nota media")
+for almuno in lista:
+    print("\t", nom)
+    print("\t",cognom)
+    print("\t", edat)
+    print("\t", nota1)
+    print("\t", nota2)
+    print("\t", nota3)
+
+print("Tenen un 8")
+for almuno in lista2:
+    print("\t", nom)
+    print("\t",cognom)
+    print("\t", edat)
+    print("\t", nota1)
+    print("\t", nota2)
+    print("\t", nota3)
+
 
 
 
