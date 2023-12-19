@@ -15,7 +15,7 @@ Pinta per pantalla les dues llistes de la següent forma: titol o nom representa
 
 #PRE: Queremos saber cuales la informacion de cada estudiante y que notas tiene
 
-alum= int(input('Pon el numero de alumnos que quieras hacer:'))
+alum= 3
 contador=1
 lista=[]
 lista2=[]
@@ -38,21 +38,21 @@ while contador < alum:
     contador = contador + 1
 print("nota media")
 for almuno in lista:
-    print("\t", nom)
-    print("\t",cognom)
-    print("\t", edat)
-    print("\t", nota1)
-    print("\t", nota2)
-    print("\t", nota3)
+    print("\t""\n", nom)
+    print("\t""\n",cognom)
+    print("\t""\n", edat)
+    print("\t""\n", nota1)
+    print("\t""\n", nota2)
+    print("\t""\n", nota3)
 
 print("Tenen un 8")
 for almuno in lista2:
-    print("\t", nom)
-    print("\t",cognom)
-    print("\t", edat)
-    print("\t", nota1)
-    print("\t", nota2)
-    print("\t", nota3)
+    print("\t""\n", nom)
+    print("\t""\n",cognom)
+    print("\t""\n", edat)
+    print("\t""\n", nota1)
+    print("\t""\n", nota2)
+    print("\t""\n", nota3)
 
 
 
