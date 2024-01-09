@@ -1,13 +1,14 @@
 
 
-
+acaba= False
 contador=0
 
 llistapreg("Capital españa? ":"Que numero lleva Messi? ": "Que año se descubrio America? ": "De que juega Oblak? ": "Cuantos Mundiales tiene España? ":)
 respuestas("Madrid","10","14922", "Portero", "1")
 
 
-
+while acaba != True:
+    
 
 seed = (seed * 997) % 1000
 random = (seed * 503) % 1000 / 100
