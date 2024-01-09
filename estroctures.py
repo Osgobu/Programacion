@@ -30,7 +30,7 @@ while contador < alum:
     alumno=(nom,cognom,edat,nota1,nota2,nota3)
 
     resultado_final= (nota1*0.30) + (nota2 * 0.40) + (nota3 * 0.30)
-    if resultado_final <= 7:
+    if resultado_final >= 7:
         lista.append(alumno)
         
     if nota1>=8 or nota2>=8 or nota3>=8:
@@ -38,8 +38,8 @@ while contador < alum:
     contador = contador + 1
 print("nota media")
 for almuno in lista:
-    print("\t", "Nom: ", nom)
-    print("\t","Cognom: ", cognom)
+    print("\t", "Nom: ", alumno[0])
+    print("\t","Cognom: ", alumno[1])
     print("\t","Edat: ", edat)
     print("\t","Nota 1: ", nota1)
     print("\t","Nota 2: ", nota2)
@@ -47,8 +47,8 @@ for almuno in lista:
 
 print("\n""Tenen un 8")
 for almuno in lista2:
-    print("\t", "Nom: ", nom)
-    print("\t","Cognom: ", cognom)
+    print("\t", "Nom: ", alumno[0])
+    print("\t","Cognom: ", alumno[1])
     print("\t","Edat: ", edat)
     print("\t","Nota 1: ", nota1)
     print("\t","Nota 2: ", nota2)
