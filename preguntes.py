@@ -3,7 +3,9 @@
 
 contador=0
 
-llistapreg((Como te llamas? )(Cuantos años tienes?)(Que signo eres? )(Que fecha es tu cumpleaños? )(Te gusta la pizza de piña? ))
+llistapreg("Capital españa? ":"Que numero lleva Messi? ": "Que año se descubrio America? ": "De que juega Oblak? ": "Cuantos Mundiales tiene España? ":)
+respuestas("Madrid","10","14922", "Portero", "1")
+
 
 
 
