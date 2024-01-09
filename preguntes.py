@@ -1,5 +1,2 @@
-pregunta1=input(Como te llamas? )
-pregunta2=int(input(Cuantos años tienes?) )
-pregunta3=input(Que signo eres? )
-pregunta4=int(input(Que fecha es tu cumpleaños? ))
-pregunta5=input(Te gusta la pizza de piña? )
+llistapreg(Como te llamas? )(Cuantos años tienes?)(Que signo eres? )(Que fecha es tu cumpleaños? )(Te gusta la pizza de piña? )
+
