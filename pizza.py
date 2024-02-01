@@ -20,6 +20,8 @@ def Comanda(ccomanda):
             ccomanda.append(comanda)
 Comanda(ccomanda)
 
+def stock(pizza4, pizzaj, pizzac, pizzab):
+#iba a hacer otra funcion del stcok con las pizzas
 
 
 
