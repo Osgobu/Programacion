@@ -1,0 +1,1 @@
+comanda=input("Escribe que pizza quieres: ")
