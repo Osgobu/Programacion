@@ -1,0 +1,1 @@
+create table Doctor(hospital_cod tinyint(2), cognom varchar(13), especialitat varchar(16), foreign key (hospital_cod) references Hospital(hospital_cod) );
