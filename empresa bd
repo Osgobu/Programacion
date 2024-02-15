@@ -1,0 +1,69 @@
+create database;
+
+create table dept( 
+    dept_no tinyint(2) primary key,
+    dnom varchar(14),
+    loc varchar(14)
+);
+
+create table emp(
+    emp_no smallint(4) primary key,
+    cognom varchar(10),
+    ofici varchar(10),
+    cap smallint(4),
+    data_alta date,
+    salari int,
+    comissio int,
+    dept_no tinyint(2),
+    foreign key (dept_no) references dept(dept_no)
+);
+
+create table client(
+    client_cod int(6) primary key,
+    nom varchar(45),
+    adreca varchar(40),
+    ciutat varchar(30),
+    estat varchar(2),
+    codi_postal varchar(9),
+    area smallint(3),
+    telefon varchar(9),
+    repr_cod smallint(4),
+    limi_credit decimal(9,2),
+    observacions text
+);
+
+create table comanda(
+    com_num smallint(4) primary key,
+    com_data date,
+    com_tipus char(1),
+    client_cod int(6),
+    foreign key (client_cod) references client (client_cod),
+    sata_tramesa date,
+    total decimal(8,2)
+);
+
+create table producte(
+    prod_num int(6) primary key,
+    descripcio varchar(30)
+);
+
+create table detall(
+    com_num smallint(4),
+    foreign key (com_num) references comanda (com_num),
+    detall_num smallint(4) primary key,
+    prod_num int(6),
+    foreign key (prod_num) references producte (prod_num),
+    preu_unitat decimal(8,2),
+    quantitat int(8),
+    import decimal(8,2)
+);
+
+insert into dept(dept_no,dnom,loc)values
+(2,'agua','fanta'); 
+
+insert into emp(emp_no,cognom,ofici,cap,data_alta,salari,comissio,dept_no) values
+(1,'Gomez','Empresari',7,'2024-02-17',50000,30,2), 
+(3,'Jimenez','Empresari',7,'2024-02-17',200000,30,2);
+
+insert into client(client_cod,nom,adreca,ciutat,estat,codi_postal,area,telefon,repr_cod,limi_credit,observacions) values
+(10)
