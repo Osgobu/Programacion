@@ -1,0 +1,6 @@
+ceate database Escola;
+use Escola;
+
+create table Estudiant(
+    
+);

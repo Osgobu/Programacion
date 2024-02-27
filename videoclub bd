@@ -1,0 +1,115 @@
+create database Videoclub;
+use Videoclub;
+
+create table genere(
+    CodiGenere int(5) primary key,
+    Descripcio varchar(15)
+);
+
+create table actor(
+    CodiActor int(5) primary key,
+    Nom varchar(15)
+);
+
+create table pelicula(
+    CodiPeli int(5) primary key,
+    Titol varchar(15),
+    CodiGenere int(5),
+    foreign key (CodiGenere) references genere(CodiGenere),
+    SegonaPart int(5),
+    CodiActor int(5),
+    foreign key (CodiActor) references actor(CodiActor)
+);
+
+create table copia(
+    CodiPeli int(5),
+    foreign key (CodiPeli) references pelicula(CodiPeli),
+    CodiCopia int(5) primary key
+);
+
+
+
+create table client(
+    DNI char(10) primary key,
+    Nom varchar(20),
+    Adreca varchar(20),
+    telefon char(9)
+);
+
+create table prestec(
+    CodiPeli int(5),
+    foreign key (CodiPeli) references pelicula(CodiPeli),
+    CodiCopia int(5),
+    foreign key (CodiCopia) references copia(CodiCopia),
+    Fecha date primary key,
+    Import decimal(9,2),
+    DNI char(10),
+    foreign key (DNI) references client(DNI)
+);
+
+create table factura(
+    CodiFactura int(5) primary key,
+    Fecha date,
+    foreign key (Fecha) references prestec(Fecha),
+    Import decimal(9,2),
+    DNI char(10),
+    foreign key (DNI) references client(DNI)
+);
+
+create table detallfactura(
+    CodiFactura int(5),
+    foreign key (CodiFactura) references factura(CodiFactura),
+    LineaFactura int(5) primary key,
+    Descripcio varchar(15),
+    PreuUnitari Decimal(9,2),
+    NumeroUnitats int(5)
+);
+
+SELECT f.Fecha, f.Import, c.Nom, c.telefon
+FROM factura f
+JOIN client c ON f.DNI = c.DNI;
+
+SELECT SUM(Import)
+FROM factura
+WHERE Fecha = '2009-03-06';
+
+SELECT d.Descripcio
+FROM detallfactura d
+JOIN factura f ON d.CodiFactura = f.CodiFactura
+JOIN client c ON f.DNI = c.DNI
+WHERE c.DNI = '022222222R';
+
+SELECT DISTINCT a.Nom
+FROM actor a
+WHERE a.CodiActor IN (SELECT CodiActor FROM pelicula WHERE CodiActor IS NOT NULL);
+
+SELECT DISTINCT a.Nom
+FROM actor a
+JOIN pelicula p ON a.CodiActor = p.CodiActor
+WHERE p.CodiActor IN (SELECT CodiActor FROM pelicula WHERE CodiActor IS NOT NULL);
+
+SELECT a.Nom
+FROM actor a
+WHERE a.CodiActor NOT IN (SELECT CodiActor FROM pelicula WHERE CodiActor IS NOT NULL);
+
+SELECT p.Titol
+FROM pelicula p
+JOIN genere g ON p.CodiGenere = g.CodiGenere
+WHERE g.Descripcio = 'Terror';
+
+SELECT c.Nom, p.Titol
+FROM prestec pr
+JOIN client c ON pr.DNI = c.DNI
+JOIN copia co ON pr.CodiCopia = co.CodiCopia
+JOIN pelicula p ON co.CodiPeli = p.CodiPeli;
+
+SELECT DISTINCT a.Nom
+FROM actor a
+JOIN pelicula p ON a.CodiActor = p.CodiActor
+WHERE p.CodiActor IS NOT NULL;
+
+UPDATE client
+SET Adresa = 'Egara,106.Terrassa'
+WHERE DNI = '022222222R';
+
+
