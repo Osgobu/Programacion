@@ -2,7 +2,7 @@
 #2.1.Calcular la desviacion estandar
 
 class Statistics():
-    def desviacio(self):
+    def desviacio(self) -> None:
         
     
 
