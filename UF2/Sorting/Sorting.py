@@ -4,5 +4,6 @@ from stats import Statistics
 class Sorting():
     def __init__(self):
         self sorting=Sorting()
-    def llista_nombres(self, nombre:str, numeroa:int) -> None:
-        if nombre in self.
+    def llista_nombres(self, numeroa:int) -> None:
+        if nombre in self.stats.keys():
+            self.nombres
