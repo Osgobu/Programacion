@@ -1,4 +1,6 @@
 package PACMAN;
 
-class pacman;
+public class pacman;
+
+    #buscar atributos 
 
