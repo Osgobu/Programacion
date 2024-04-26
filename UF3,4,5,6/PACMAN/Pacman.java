@@ -21,9 +21,12 @@ public class pacman;
 
     public void pickupBola();{
         //Quiero que cuando se coma una bola sue a la puntuacion
-        puntuacion = puntuacion +1
-        System.out.println("Puntuacion:" puntuacion)
+        pacman(){
+            puntuacion = puntuacion +1
+            System.out.println("Puntuacion:" puntuacion)
+        }
     }
 
+    
 
 
