@@ -10,6 +10,8 @@ public class pacman;
     private int x;
     private int y;
 
+    public PACMAN(puntuacion,move,x,y,vidas)
+
     public void move();{
         //Quiero comprobar si esta en la izquierda para empezar des de la derecha 
         if (x<1 && y>310){
@@ -21,12 +23,17 @@ public class pacman;
 
     public void pickupBola();{
         //Quiero que cuando se coma una bola sue a la puntuacion
-        pacman(){
             puntuacion = puntuacion +1
             System.out.println("Puntuacion:" puntuacion)
         }
     }
 
-    
+    public void pickupBolaEspecial();{
+        //quiero darle poderes a pacman
+    }
 
+    public void loseLife(){
+        //QUiero restar vidas
+        this.vidas =--
+    }
 
