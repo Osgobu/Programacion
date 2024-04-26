@@ -1,0 +1,4 @@
+package PACMAN;
+
+class pacman;
+
