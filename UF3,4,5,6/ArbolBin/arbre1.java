@@ -3,8 +3,8 @@
 
 class arbre1(){
     
-    public arbreBin(Int valorIzq, Int valorDer){
+    public arbre1(Int valorIzq, Int valorDer){
        
-       
+
     }
 }
