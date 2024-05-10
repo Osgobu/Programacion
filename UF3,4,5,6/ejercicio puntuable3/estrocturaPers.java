@@ -36,7 +36,7 @@ class Personaje
         try {
             DocumentBuilder builder = builderFactory.newDocumentBuilder();
             //Obrim el fitxer, i com que aixo pot portar errors ho fiquem tot dins dun TRY/CATCH
-            File f = new File ("elMeuFitxer.xml");
+            File f = new File ("personatges.xml");
             document = builder.parse(f);
             //Aqui tindriem l'arrel del XML
             Element e = document.getDocumentElement();
@@ -124,7 +124,7 @@ class Personaje
 
             //El que vull fer es crear una arrel de crear personatges i d'aqui que surtin dos branques amb els dos personatges y despres d'aquets que surtin els seus elemtns 
             // Element arrel
-            Element Creapersonatge = document.createElement("LlistaPersonatges");
+            Element arrel = document.createElement("personatges");
             document.appendChild(personatge);
 
             // Element fill de l'arrel
@@ -133,7 +133,7 @@ class Personaje
             prod.setAttribute("aLaVenda", "true");
 
             // Elements fill de l'anterior
-            Element fill = document.createElement("Nom");
+            Element fill = document.createElement("personatge");
             fill.setTextContent("Producte 1");
             prod.appendChild(fill);
 
