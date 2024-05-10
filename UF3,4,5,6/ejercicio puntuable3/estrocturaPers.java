@@ -122,27 +122,38 @@ class Personaje
             DocumentBuilder builder = builderFactory.newDocumentBuilder();
             document = builder.newDocument();
 
-            //El que vull fer es crear una arrel de crear personatges i d'aqui que surtin dos branques amb els dos personatges y despres d'aquets que surtin els seus elemtns 
+            //El que vull fer es crear una arrel de crear personatges i d'aqui que surtin el personatges y despres d'aquets que surtin els seus elements 
             // Element arrel
             Element arrel = document.createElement("personatges");
             document.appendChild(personatge);
 
             // Element fill de l'arrel
-            Element prod = document.createElement("Producte");
+            Element prod = document.createElement("personatge");
             prod.setAttribute("id", "1");
-            prod.setAttribute("aLaVenda", "true");
 
             // Elements fill de l'anterior
-            Element fill = document.createElement("personatge");
-            fill.setTextContent("Producte 1");
+            Element fill = document.createElement("nom");
+            fill.setTextContent("Gandalf");
             prod.appendChild(fill);
 
-            fill = document.createElement("Preu");
-            fill.setTextContent("10.0");
+            fill = document.createElement("nivell");
+            fill.setTextContent("10");
             prod.appendChild(fill);
 
-            fill = document.createElement("Estoc");
-            fill.setTextContent("4");
+            fill = document.createElement("puntsDeVida");
+            fill.setTextContent("100");
+            prod.appendChild(fill);
+
+            fill = document.createElement("puntsDeMana");
+            fill.setTextContent("150");
+            prod.appendChild(fill);
+
+            fill = document.createElement("arma");
+            fill.setTextContent("Gràvida de llum");
+            prod.appendChild(fill);
+
+            fill = document.createElement("armadura");
+            fill.setTextContent("Roba de mag");
             prod.appendChild(fill);
 
             arrel.appendChild(prod);
