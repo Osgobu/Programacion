@@ -66,11 +66,11 @@ class Personaje
         
         try {
             DocumentBuilder builder = builderFactory.newDocumentBuilder();
-            File f = new File ("elMeuFitxer.xml");
+            File f = new File ("personatges.xml");
             document = builder.parse(f);
             Element e = document.getDocumentElement();
             //Obtenir tots els nodes del document anomenats "nom"
-            NodeList llistaElems = e.getElementsByTagName("Nom");
+            NodeList llistaElems = e.getElementsByTagName("nom");
             //Recorregut d'elements anomenats "Nom"
             for (int i = 0; i < llistaElems.getLength(); i++) {
                 Element elem = (Element)llistaElems.item(i);
