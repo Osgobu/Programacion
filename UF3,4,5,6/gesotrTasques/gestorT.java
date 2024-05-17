@@ -2,7 +2,7 @@ import java.io.*;
 import java.io.File;
 import java.io.IOException;
 
-class File {
+class FileExample {
     public static void main(String[] args) {
 
         // Aqui se crea un fichero con datos
