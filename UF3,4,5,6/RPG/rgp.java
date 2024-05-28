@@ -15,7 +15,7 @@ public class Item {
         
         public int getId() { 
             return id; 
-            } 
+        } 
             
         public String getNom() { 
             return nom; 
@@ -36,5 +36,5 @@ public class Item {
         @Override 
         public String toString() { 
             return "ID: " + id + ", Nom: " + nom + ", Tipus: " + tipus + ", Valor: " + valor + " or, Pes: " + pes; 
-            } 
+        } 
 }
