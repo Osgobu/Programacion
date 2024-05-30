@@ -13,6 +13,11 @@ public class Llibre{
     }
 
 
+    //Coger los gets y los set de los dos elementos 
+    public int getId(){return id;}
+    public String getTitol(){return titol;}
 
+    public void setId(int id){this.id=id;}
+    public void setTitol(String titol){this.titol=titol;}
 }
 
