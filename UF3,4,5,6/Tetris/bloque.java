@@ -10,11 +10,11 @@ public class bloque{
     }
 
     public String getColor(){
-        return color:
+        return color;
     }
 
     public int[] getPosicion(){
-        return posicion
+        return posicion;
     }
 
 }
