@@ -1,0 +1,72 @@
+create database TechCorp;
+
+\c techcorp
+
+create type productes as (
+    id int,
+    nombre varchar(50),
+    precio decimal(10,2)
+);
+
+create table producteTech (
+    info productes
+);
+
+insert into producteTech (info) values 
+(row(1,'Ram',100.80));
+
+select (info).id, (info).nombre, (info).precio from producteTech;
+
+create type serveis as(
+    RegistrarUsuarios varchar(50)
+);
+
+create table servei (
+    info serveis
+);
+
+insert into servei (info) values
+(row('Carmen'));
+
+select (info).RegistrarUsuarios from servei;
+
+
+create table ProducteSoftware(
+    marca varchar(50),
+    version int
+)inherits (producteTech);
+
+insert into ProducteSoftware (marca,version) values ('Windows', 10);
+
+
+create table ProducteHardware(
+    marca varchar(50),
+    potencia int
+)inherits (producteTech);
+
+insert into ProducteHardware (marca, potencia) values ('Nvidia', 50);
+
+select * from producteTech; 
+
+
+create table clients (
+    id_client int primary key,
+);
+
+create table compra (
+    id_compra int primary key,
+    id_client int references clients(id_client)
+);
+
+insert into clients(id_client, compra) values (1, row(6,'teclado',20.90));
+
+create table llistaProductes(
+    id_productes int[]
+);
+
+insert into llistaProductes values (1,2,3);
+
+update servei 
+set info.RegistrarUsuarios = 'Joan';
+
+select (info).RegistrarUsuarios from servei;
